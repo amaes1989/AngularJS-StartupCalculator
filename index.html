@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="startUpCalcApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+
+<body>
+    <form ng-controller="CalcController" ng-submit="requestFunding()">
+        <label>Starting: </label>
+        <input ng-change="computeNeeded()" ng-model="startingEstimate"> <br>
+        <label>Recommendation: {{needed}}</label>
+        <button>Fund my startup!</button>
+        <button ng-click="reset()">Reset</button>
+    </form>
+
+</body>
+
+</html>
